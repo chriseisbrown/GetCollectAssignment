@@ -8,7 +8,7 @@ col_name_data$new_col_name <- apply(col_name_data, 1, function(x) {  result <- g
 
 
 # get a vector of the column names
-col_names <- col_name_data[["col_name"]]    
+col_names <- col_name_data[["new_col_name"]]    
 
 # get data from training set with columnnames
 training_data <- read.table("UCI HAR Dataset/train/X_train.txt", header=FALSE, col.names=col_names)
@@ -25,11 +25,13 @@ activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", header=FALS
 # join the main data and the activity lookups, now all row data should be complete; each row has an activity name and the 561 data points
 training_data_and_activity_name <- merge(activity_labels, training_data_and_activity,by="activity_id", all.x=TRUE)
 
-# create a vector of column names that we are interested in: e.g. any means or stds
+# create a vector of column names that we are interested in: e.g. any means or stds measurements
 cols <- colnames(training_data_and_activity_name)
-column_std <- column_finder(cols, "std\\.")
-column_mean <- column_finder(cols, "mean\\.")
-# just the columns for std and means with the activity names
+
+column_std <-  grep("Std[XYZ]", cols, perl=TRUE, value=TRUE)
+column_mean <-  grep("Mean[XYZ]", cols, perl=TRUE, value=TRUE)
+
+# so we want just the columns for std and means measurements with the activity names
 column_std_and_mean <- c("activity_name", column_std, column_mean)
 
 # get a subset of the data with these columns
