@@ -37,4 +37,25 @@ column_std_and_mean <- c("activity_name", column_std, column_mean)
 # get a subset of the data with these columns
 training_data_and_activity_name_std_mean <- training_data_and_activity_name[, column_std_and_mean]
 
+# split data on activity labels
+number_of_columns <- 49
+result_frame <- data.frame(t(rep(NA,number_of_columns)), stringsAsFactors = FALSE)
+names(result_frame) <- colnames(training_data_and_activity_name_std_mean)
+result_frame <- result_frame[-1,]
+
+split_training_data_and_activity_name_std_mean <- split(training_data_and_activity_name_std_mean, activity_labels$activity_name)
+for(s in split_training_data_and_activity_name_std_mean){
+    
+    # 
+    s_numeric <- s[, 2:49]
+    s_numeric <- data.frame(lapply(s_numeric, as.numeric), stringsAsFactors=FALSE)
+    s_numeric <- apply(s_numeric, 2, mean)
+    
+    #sdf <- data.frame(lapply(s, as.character), stringsAsFactors=FALSE)
+    #result_activity_label <- sdf[1,1]
+    
+    result_row <- c(activity_name=result_activity_label, s_numeric)
+    r <- data.frame(as.list(result_row))
+    result_frame <- rbind(result_frame, r)
+}
 

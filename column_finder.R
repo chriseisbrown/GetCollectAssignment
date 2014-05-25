@@ -1,6 +1,6 @@
-column_finder <- function (column_names, to_find){
+column_finder <- function (column_names, toFind){
 
     #find <- to_find + "\\."
     
-    result <- grep(to_find, column_names, perl=TRUE, value=TRUE)
+    result <- grep(toFind, column_names, perl=TRUE, value=TRUE)
 }
