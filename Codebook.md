@@ -1,5 +1,5 @@
-## GetCollectAssignment
-
+GetCollectAssignment
+====================
 
 An assignment for the Johns Hopkins Data Science online course module: Getting and Cleaning Data 
 
