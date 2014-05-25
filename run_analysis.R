@@ -43,7 +43,7 @@ result_frame <- data.frame(t(rep(NA,number_of_columns)), stringsAsFactors = FALS
 names(result_frame) <- colnames(training_data_and_activity_name_std_mean)
 result_frame <- result_frame[-1,]
 
-split_training_data_and_activity_name_std_mean <- split(training_data_and_activity_name_std_mean, activity_labels$activity_name)
+split_training_data_and_activity_name_std_mean <- split(training_data_and_activity_name_std_mean, activity_labels$activity_name, drop = TRUE)
 for(s in split_training_data_and_activity_name_std_mean){
     
     # 
@@ -53,6 +53,7 @@ for(s in split_training_data_and_activity_name_std_mean){
     
     #sdf <- data.frame(lapply(s, as.character), stringsAsFactors=FALSE)
     #result_activity_label <- sdf[1,1]
+    result_activity_label <- as.character(s[1,1])
     
     result_row <- c(activity_name=result_activity_label, s_numeric)
     r <- data.frame(as.list(result_row))
