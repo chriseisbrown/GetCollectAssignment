@@ -12,14 +12,14 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Instructions
-============
+## Instructions
+
 The script to run is called run_analysis.R.  There is an RStudio project called GetCollectAssignment.Rproj that will set corrrect working directories. All data from the zip file needs to be loaded into the directory alongside the R script.
 
 No parameters are needed to run the script.
 
 
-* How the script works
+## How the script works
 
 1. get column names for the main data set by reading the features.txt file
 2. make the column names a little more user friendly by using substitutions, taking out the punctuations used and camel casing the columns we will be using.
