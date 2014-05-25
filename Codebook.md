@@ -1,20 +1,79 @@
 GetCollectAssignment
 ====================
 
-An assignment for the Johns Hopkins Data Science online course module: Getting and Cleaning Data 
+"activity_name"      "tBodyAccStdX"       "tBodyAccStdY"       "tBodyAccStdZ"      
+ [5] "tGravityAccStdX"    "tGravityAccStdY"    "tGravityAccStdZ"    "tBodyAccJerkStdX"  
+ [9] "tBodyAccJerkStdY"   "tBodyAccJerkStdZ"   "tBodyGyroStdX"      "tBodyGyroStdY"     
+[13] "tBodyGyroStdZ"      "tBodyGyroJerkStdX"  "tBodyGyroJerkStdY"  "tBodyGyroJerkStdZ" 
+[17] "fBodyAccStdX"       "fBodyAccStdY"       "fBodyAccStdZ"       "fBodyAccJerkStdX"  
+[21] "fBodyAccJerkStdY"   "fBodyAccJerkStdZ"   "fBodyGyroStdX"      "fBodyGyroStdY"     
+[25] "fBodyGyroStdZ"      "tBodyAccMeanX"      "tBodyAccMeanY"      "tBodyAccMeanZ"     
+[29] "tGravityAccMeanX"   "tGravityAccMeanY"   "tGravityAccMeanZ"   "tBodyAccJerkMeanX" 
+[33] "tBodyAccJerkMeanY"  "tBodyAccJerkMeanZ"  "tBodyGyroMeanX"     "tBodyGyroMeanY"    
+[37] "tBodyGyroMeanZ"     "tBodyGyroJerkMeanX" "tBodyGyroJerkMeanY" "tBodyGyroJerkMeanZ"
+[41] "fBodyAccMeanX"      "fBodyAccMeanY"      "fBodyAccMeanZ"      "fBodyAccJerkMeanX" 
+[45] "fBodyAccJerkMeanY"  "fBodyAccJerkMeanZ"  "fBodyGyroMeanX"     "fBodyGyroMeanY"    
+[49] "fBodyGyroMeanZ" 
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
+The output is written to a file called assignment_results.csv.  This data is in csv format and has the following columns
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+[1]    activity_name
+This can be:  
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+The values presented for each column are means of the measures that were collected, grouped by subject for each physical activity undertaken in the experiments. 
 
-Here are the data for the project: 
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-
-Instructions
-============
-The script to run is called run_analysis.R.  There is an RStudio project called GetCollectAssignment.Rproj that will set corrrect working directories. All data from the zip file needs to be loaded into the directory alongside the R script.
-
-No parameters are needed to run the script.
+The following columns are standard deviation or mean measures extracted from the original data set.  These columns were chosen as the assignment was not specific about which columns to use, only those that were std or mean.
+[2] tBodyAccStdX
+[3]tBodyAccStdY
+[4]tBodyAccStdZ
+[5]tGravityAccStdX
+tGravityAccStdY
+tGravityAccStdZ
+tBodyAccJerkStdX
+tBodyAccJerkStdY
+tBodyAccJerkStdZ
+tBodyGyroStdX
+tBodyGyroStdY
+tBodyGyroStdZ
+tBodyGyroJerkStdX
+tBodyGyroJerkStdY
+tBodyGyroJerkStdZ
+fBodyAccStdX
+fBodyAccStdY
+fBodyAccStdZ
+fBodyAccJerkStdX
+fBodyAccJerkStdY
+fBodyAccJerkStdZ
+fBodyGyroStdX
+fBodyGyroStdY
+fBodyGyroStdZ
+tBodyAccMeanX
+tBodyAccMeanY
+tBodyAccMeanZ
+tGravityAccMeanX
+tGravityAccMeanY
+tGravityAccMeanZ
+tBodyAccJerkMeanX
+tBodyAccJerkMeanY
+tBodyAccJerkMeanZ
+tBodyGyroMeanX
+tBodyGyroMeanY
+tBodyGyroMeanZ
+tBodyGyroJerkMeanX
+tBodyGyroJerkMeanY
+tBodyGyroJerkMeanZ
+fBodyAccMeanX
+fBodyAccMeanY
+fBodyAccMeanZ
+fBodyAccJerkMeanX
+fBodyAccJerkMeanY
+fBodyAccJerkMeanZ
+fBodyGyroMeanX
+fBodyGyroMeanY
+[49]fBodyGyroMeanZ
