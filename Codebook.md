@@ -15,8 +15,9 @@ The values presented for each column are means of the measures that were collect
 
 The following columns are standard deviation or mean measures extracted from the original data set.  These columns were chosen as the assignment was not specific about which columns to use, only those that were std or mean.
 
-tBodyAccStdX
-[3] tBodyAccStdY
+  *tBodyAccStdX
+
+tBodyAccStdY
 [4] tBodyAccStdZ
 [5] tGravityAccStdX
 tGravityAccStdY
