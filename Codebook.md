@@ -4,12 +4,12 @@ The output is written to a file called assignment_results.csv.  This data is in 
 
 [1]    activity_name
 This can be:  
-WALKING
-WALKING_UPSTAIRS
-WALKING_DOWNSTAIRS
-SITTING
-STANDING
-LAYING
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 
 The values presented for each column are means of the measures that were collected, grouped by subject for each physical activity undertaken in the experiments. 
 
