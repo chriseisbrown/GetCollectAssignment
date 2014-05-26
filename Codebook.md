@@ -15,51 +15,109 @@ The values presented for each column are means of the measures that were collect
 
 The following columns are standard deviation or mean measures extracted from the original data set.  These columns were chosen as the assignment was not specific about which columns to use, only those that were std or mean.
 
-  1.tBodyAccStdX
-  2.tBodyAccStdY
-[4] tBodyAccStdZ
-[5] tGravityAccStdX
+## Key to column names
+t= time series
+f = fourier transform
+Body =  body collected measurement
+Gravity = gravity fed measure
+Acc = acceleration
+X, Y, Z = planes of movement
+Std = standard deviation
+Mean = mean
+
+tBodyAccStdX
+
+tBodyAccStdY
+
+tBodyAccStdZ
+
+tGravityAccStdX
+
 tGravityAccStdY
+
 tGravityAccStdZ
+
 tBodyAccJerkStdX
+
 tBodyAccJerkStdY
+
 tBodyAccJerkStdZ
+
 tBodyGyroStdX
+
 tBodyGyroStdY
+
 tBodyGyroStdZ
+
 tBodyGyroJerkStdX
+
 tBodyGyroJerkStdY
+
 tBodyGyroJerkStdZ
+
 fBodyAccStdX
+
 fBodyAccStdY
+
 fBodyAccStdZ
+
 fBodyAccJerkStdX
+
 fBodyAccJerkStdY
+
 fBodyAccJerkStdZ
+
 fBodyGyroStdX
+
 fBodyGyroStdY
+
 fBodyGyroStdZ
+
 tBodyAccMeanX
+
 tBodyAccMeanY
+
 tBodyAccMeanZ
+
 tGravityAccMeanX
+
 tGravityAccMeanY
+
 tGravityAccMeanZ
+
 tBodyAccJerkMeanX
+
 tBodyAccJerkMeanY
+
 tBodyAccJerkMeanZ
+
 tBodyGyroMeanX
+
 tBodyGyroMeanY
+
 tBodyGyroMeanZ
+
 tBodyGyroJerkMeanX
+
 tBodyGyroJerkMeanY
+
 tBodyGyroJerkMeanZ
+
 fBodyAccMeanX
+
 fBodyAccMeanY
+
 fBodyAccMeanZ
+
 fBodyAccJerkMeanX
+
 fBodyAccJerkMeanY
+
 fBodyAccJerkMeanZ
+
 fBodyGyroMeanX
+
 fBodyGyroMeanY
-[49]fBodyGyroMeanZ
+
+fBodyGyroMeanZ
+
